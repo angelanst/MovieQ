@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_detail"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:id="@+id/img_poster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/poster" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ic_date_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv_detail"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/date"
+            android:src="@drawable/ic_release_date" />
+
+        <TextView
+            android:id="@+id/txt_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/ic_date_detail"
+            android:layout_below="@id/cv_detail"
+            android:text="@string/date"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_below="@id/cv_detail"
+            android:layout_toStartOf="@id/txt_rating_detail"
+            android:src="@drawable/ic_star"
+            android:contentDescription="@string/rating" />
+
+        <TextView
+            android:id="@+id/txt_rating_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv_detail"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/rating" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/ic_date_detail"
+            android:layout_centerHorizontal="true"
+            style="@style/TextTitle"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:textAlignment="gravity"
+            android:layout_below="@id/txt_title"
+            android:layout_centerHorizontal="true"
+            style="@style/TextDesc"
+            tools:text="Description" />
+
+        <ToggleButton
+            android:id="@+id/tb_favorite"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:textOn=""
+            android:textOff=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/favorite_icon" />
+    </RelativeLayout>
+</ScrollView>
