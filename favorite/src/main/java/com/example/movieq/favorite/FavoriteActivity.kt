@@ -3,6 +3,7 @@ package com.example.movieq.favorite
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieq.R
 import com.example.movieq.core.domain.model.Movie
@@ -29,6 +30,7 @@ class FavoriteActivity : AppCompatActivity() {
         favoriteViewModel.favMovie.observe(this, { dataList ->
             if (dataList != null) {
                 movieAdapter.setData(dataList)
+                binding.viewEmpty.root.visibility = if (dataList.isNotEmpty()) View.GONE else View.VISIBLE
             }
         })
 
