@@ -1,4 +1,4 @@
-package com.example.movieq
+package com.example.movieq.favorite
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData

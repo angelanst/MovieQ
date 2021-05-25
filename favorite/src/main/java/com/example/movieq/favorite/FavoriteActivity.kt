@@ -1,13 +1,15 @@
-package com.example.movieq
+package com.example.movieq.favorite
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.movieq.R
 import com.example.movieq.core.domain.model.Movie
 import com.example.movieq.core.ui.MovieAdapter
-import com.example.movieq.databinding.ActivityFavoriteBinding
 import com.example.movieq.detail.DetailActivity
+import com.example.movieq.favorite.databinding.ActivityFavoriteBinding
+import com.example.movieq.favoriteModule
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
 
