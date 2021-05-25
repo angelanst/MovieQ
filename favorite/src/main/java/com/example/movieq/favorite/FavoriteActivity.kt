@@ -9,7 +9,7 @@ import com.example.movieq.core.domain.model.Movie
 import com.example.movieq.core.ui.MovieAdapter
 import com.example.movieq.detail.DetailActivity
 import com.example.movieq.favorite.databinding.ActivityFavoriteBinding
-import com.example.movieq.favoriteModule
+import com.example.movieq.favorite.di.favoriteModule
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
 
